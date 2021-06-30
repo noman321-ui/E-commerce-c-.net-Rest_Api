@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Home/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../home"><b>JNFASHION&reg</b></a></div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-3 text-secondary cart" href="#"><i class="fa fa-shopping-bag fa-lg"></i></a>
+                    <a class="text-secondary profile" href="#"><i class="fa fa-user fa-lg"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="profile-div mr-3">
+            <div class="HoverAbleDivProfile">
+                <div class="row p-2 ">
+                    <div class="col">
+                        <ul class="profileList">
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-div mr-3">
+            <div class="HoverAbleDivCart">
+                <div class="row p-2">
+                    <div class="col init">
+                        
+                            
+                        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Home/manCategories.html/1">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/WomenCategories.html/2">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+            <hr />
+            <div class="container text-center mt-2">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-secondary">SHOPPING CART</h3>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-1">
+                        <p class="text-secondary">#</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-secondary">REMOVE</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-secondary">PICTURE</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-secondary">PRODUCT(S)</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-secondary">PRICE(৳)</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-secondary">QUANTITY</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="text-secondary">TOTAL</p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <form id="hideonempty">
+                <div class="cartform">
+                
+                </div>
+            </form>
+           
+            
+            <div class="container text-center m-5" id ="emptycart" style="display:none">
+                <p style="color:red">Nothing In Your Cart</p>
+                <a class="border border-secondary p-2" href="../Home">Continue Shopping</a>
+            </div>
+            
+            <div id="StockOutModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header StockOutHeader">
+            
+                        </div>
+                        <div class="modal-body StockOutBody">
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                $.ajax({
+                    url : 'http://localhost:49274/api/cart/index',
+                    method : "GET",
+                    complete : function(xmlHttp, status){
+                        if(xmlHttp.status == 200)
+                        {
+                            var data = xmlHttp.responseJSON;
+                            var flag = false;
+                            var j = 1;
+                            var i = 0;
+                            var c1 = 0;
+                            var total = 0;
+                            var errorcheckig = false;
+                            var y=0;
+                            $.each(data, function(index, value){
+                                flag = true;
+                                y++;
+                               
+                                var image = (value.product.ImageFile).split('|')[0];
+                                $(".cartform").append(`<div class="container text-center delete"><div class="row fll${y}"><div class="col-1"><p class="text-secondary">${j}</p> </div><div class="col-1"><button class="btn btn btn-light" type="button" onclick="deleteCart(this)" data-cartindex-type="${i}"><i class="far fa-trash-alt"></i></button></div><div class="col-1"><img style="max-width:100%;" src="../image/${image}" alt="product_image"/>`+
+                                    `</div>`+
+                                    `<div class="col-6 vvv${y}">`+
+                                        `<div class="container nam${y} text-center">`+
+                                        `<p class="font-weight-bold">${value.product.Product_name}</p>`);
+                                        
+                                if(value.size.Count >0){
+                                    $(`.nam${y}`).append(`<p>SIZE:&nbsp;${value.size.SizeName}</p>`);
+
+                                }if(value.outOfStock == "Out Of Stock"){
+                                    errorcheckig = true;
+                                    $(`.nam${y}`).append(`<p class="stockout" style="color:red">${value.outOfStock}</p>`);
+                                    
+                                }else{
+                                    $(`.nam${y}`).append(`<a class="font-weight-bold" href="../Product/EditCartItem/${i}">EDIT</a>`);
+
+                                }
+                                $(`.vvv${y}`).append(`</div>`);
+                                $(`.fll${y}`).append(`</div>`);
+                                $(`.fll${y}`).append(`<div class="col-1 fls${y}">`);
+                                if(value.product.Sale){
+                                    var p = Number(value.product.UnitPrice);
+                                    var v = Number(item.product.Sale.Amount) / 100;
+                                    c1 = (p - (p * v));
+                                    $(`.fls${y}`).append(`<p><s>${value.product.UnitPrice}</s> &nbsp; ${c1}</p>`);
+                                }else{
+                                    $(`.fls${y}`).append(`<p>${value.product.UnitPrice}</p>`);
+                                }
+                                $(`.fll${y}`).append(`</div><div class="col-1"><p class="p-2 border border-secondary">${value.count}</p></div>`);
+                                var subtotal = 0;
+                                
+                                if (value.product.Sale != null)
+                                {
+                                     subtotal = Number(value.count * c1);
+                                    total += subtotal;
+                                }
+                                else
+                                {
+                                     subtotal = Number(value.count * value.product.UnitPrice);
+                                    total += subtotal;
+                                }
+                                $(`.fll${y}`).append(`<div class="col-1"><p>৳ ${subtotal}</p></div>`);
+                                $(`.vvv${y}`).append(`</div>`);
+                            $(".cartform").append(`</div><hr/>`);
+                                i++;
+                                j++;
+                            });
+                            if(flag){
+                                $("#hideonempty").append(`<div class="container ml-5 nn">`+
+                    `<div class="row andiv">`+
+                        `<div class="col-9"></div>`+
+                        `<div class="col-3 nxt">`+
+                            `<button class="btn btn-light border border-secondary p-2" onClick="history.go(-1); return false;">Continue Shopping</button>`+
+                            `<div class="bg-light p-2 mt-4">`+
+                                `<table>`+
+                                    `<tr>`+
+                                        `<td>`+
+                                            `Sub-Total:&nbsp;`+
+                                        `</td>`+
+                                        `<td>`+
+                                            `৳ ${total}`+
+                                        `</td>`+
+                                    `</tr>`+
+                                    `<tr>`+
+                                        `<td>`+
+                                           `hipping:&nbsp;`+
+                                        `</td>`+
+                                        `<td>`+
+                                            `৳ 0.00`+
+                                        `</td>`+
+                                    `</tr>`+
+                                    `<tr>`+
+                                        `<td>`+
+                                            `Total:&nbsp;`+
+                                        `</td>`+
+                                        `<td>`+
+                                            `৳ ${total}`+
+                                        `</td>`+
+                                    `</tr>`+
+                                `</table>`+
+                             
+                            `</div>`);
+                            $(".nxt").append(`<div class="mt-2 nxt2">`);
+                                
+                                if (!errorcheckig)
+                                {
+                                    $(".nxt2").append(`<button class="btn btn-dark" id="nxtbtn" type="button">NEXT</button>`);
+                                }
+                                else
+                                {
+                                    
+                                    $(".nxt2").append(`<button class="btn btn-dark" id="nxtbtn" type="button" data-toggle="modal" data-target="#StockOutModal">NEXT</button>`);
+                                }
+                                $("#nxtbtn").click(function(){
+                    
+                    if ($(".stockout").length > 0) {
+                        $(".StockOutHeader").empty();
+                        $(".StockOutBody").empty();
+                        $(".StockOutHeader").append(`<h5 class="modal-title">Stock Out</h5><button type="button"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>`);
+                        $(".StockOutBody").append(`<p style="color:red">Please delete all the stock out products from cart</p>`);
+                       
+                        $(".StockOutBody").append(`<button type = "button" class="ml-2 btn btn-secondary" data-dismiss="modal">Close </button >`);
+                        
+                    } else {
+                        
+                        window.location.href = "../check";
+                    }
+                });
+                                $(".nxt").append(`</div>`);
+                        $(".andiv").append(`</div>`);
+                    $(".nn").append(`</div>`);
+                    
+                $("#hideonempty").append(`</div>`)
+            
+                
+                            }
+                            if(!flag){
+                                $(".cartform").append(`<div class="container text-center m-5">`+
+                `<p  style="color:red">Nothing In Your Cart</p>`+
+                `<a class="border border-secondary p-2" href="../Home/Index">Continue Shopping</a>`+
+            `</div>`);
+                            }
+                        }
+                    }
+                });
+               
+               
+                function deleteCart(item) {
+                    var index = item.getAttribute("data-cartindex-type");
+                    var id = index;
+                    alert(index);
+                    $.ajax({
+                        url: `http://localhost:49274/api/product/cartitemdelete/${id}`,
+                        method: "GET", 
+                        complete: function (xmlHttp, status) {
+                            if (xmlHttp.status == 204) {
+                                $(item).parents(".delete").remove();
+                                $("#hideonempty").remove();
+                                $("#emptycart").css("display", "block");
+                            } else {
+                                $(item).parents(".delete").remove();
+                            }
+                            
+                        }
+                    });
+                }
+            </script>
+
+
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark p-3 my-2">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="p-4 text-white" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <form class="form-inline">
+                        <p class="ml-1 p-2 mb-1">Newsletter!</p>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" id="inputgmail2" placeholder="enter gmail">
+                        </div>
+                        <button type="submit" class="ml-2 btn btn-secondary mb-2">subscribe</button>
+                    </form>
+                    <br>
+                    <p class="text-secondary text-center">
+                        JNFashion LTD
+                        <br>
+                        H-90, Flat-6a, R-20, Block-B
+                        <br>
+                        Kuril, Dhaka
+                        <br>
+                        Customer Support:+8801798724156
+                        <br>
+                        Email:jnabin2@gmail.com
+                    </p>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">
+                                SHIPPING & EXCHANGE
+                                POLICY
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">PRIVACY POLICY</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Terms and condition</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">About us</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Login info</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Size Guide</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">contact us</a>
+                        </li>
+                        <li class="text-secondary">
+                            helpline: 01798724156
+
+                        </li>
+
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">store location</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <p class="text-uppercase text-muted">copyright &copy; 2021 jnshop, all rights reserved. developed by team jn.</p>
+                </div>
+                <div class="col-md text-center">
+                    <ul class="list-unstyled folist">
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+
+        $(document).ready(function () {
+            function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+            $.ajax({
+                url: 'http://localhost:49274/api/Category/NavBar',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        
+                        for (var i = 0; i < data.length; i++) {
+                            
+                            if(data[i].SubCatetories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].Category_id}/1">${data[i].Category_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li class="active">`+
+                    `<a href="#homeSubmenu ${data[i].Category_id}" data-toggle="collapse" aria-expanded="false">${data[i].Category_name}</a>`+
+                
+                    `<ul class="collapse list-unstyled" id="homeSubmenu ${data[i].Category_id}">`);
+                        for(var j=0; j<data[i].SubCatetories.length; j++){
+                            if(data[i].SubCatetories[j].FinalSubCategories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].SubCatetories[j].SubCategoryId}/1">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li>`+
+                                    `<a href="#NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}" data-toggle="collapse" aria-expanded="false">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                                    `<ul class="ml-4 collapse list-unstyled" id="NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}">`);
+                                for(var k=0; k<data[i].SubCatetories[j].FinalSubCategories.length; k++){
+                                    $(".components").append(`<li>`+
+                                                `<a href="/home/getProducts/${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCategoryId}/3">${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCate_name}</a>`+
+                                            `</li>`);
+                                }
+                                $(".components").append(`</ul>`);
+                                $(".components").append(`</li>`);
+                            }
+                        }
+                        $(".components").append(`</ul>`);
+                        $(".components").append(`</li>`);
+                            }
+                        }
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+            if(getCookie("username")!=null){
+                        
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Customer/Index.html?id=${getCookie("userid")}">${getCookie("username")}</a></li>`);
+                        $(".profileList").append(`<li><a href="../Logout">Logout</a></li>`);
+                    }else{
+                       
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Registration">Registration</a></li>`);
+                        $(".profileList").append(`<li><a href="../Login">Login</a></li>`);
+                    }
+
+                    $.ajax({
+                url: 'http://localhost:49274/api/product/getcartitem',
+                method : 'Get',
+                complete: function(xmlHttp, status){
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        
+                        var q=0;
+                        var cx = false;
+                        $.each(data, function(index, value){
+                            var subtotal = 0;
+                            q++;
+                            cx = true;
+                            var image = (value.product.ImageFile).split('|')[0];
+                            if(value.product.Sale != null){
+                                var p = Number(value.product.UnitPrice);
+                                var v = Number(Number(item.product.Sale.Amount)) / 100;
+                                var c = (p - (p * v));
+    
+                                subtotal += (Number(c) * Number(value.count));
+        
+                            }else{
+                                subtotal += (Number(value.product.UnitPrice) * value.count);
+                            }
+                            $(".init").append(`<div class="container mt-3 v1${q}">`+
+                                    `<div class="row items${q}">`+
+                                        `<div class="col-3 picture">`+
+                                           
+                                            `<img src="../image/${image}" alt="cartimage" style="max-width:100%"/>`+
+                                        `</div>`+
+                                        `<div class="col-9 information${q}">`+
+                                            `<div class="productname">`+
+                                                `<a class="font-weight-bold" href="../Product/Details?id=${value.product.ProductId}">${value.product.Product_name}</a>`+
+                                            `</div>`);
+                            if(value.size != null){
+                                $(`.information${q}`).append(`<div class="productsize">`+
+                                                    `<p class="text-secondary">Size:${value.size.SizeName}</p>`+
+                                                `</div>`);
+                            }
+                            $(`.information${q}`).append(`<div class="productprice${q}">`+
+                                                `<span class="p-2 border border-dark">${value.count}</span>`);
+                                                if(value.product.Sale != null){
+                                                    var p = Number(value.product.UnitPrice);
+                                                    var v = Number(item.product.Sale.Amount) / 100;
+                                                    var c = (p - (p * v));
+                                                    $(`.productprice${q}`).append(`<span class="ml-2"><s>৳ ${value.product.UnitPrice}</s> &nbsp; ৳ ${c}</span>`);
+                                                }else{
+                                                    $(`.productprice${q}`).append(`<span class="ml-2">৳ ${value.product.UnitPrice}</span>`);
+                                                }
+                                                $(`.information${q}`).append(`</div>`);
+                                                $(`.items${q}`).append(`</div>`);
+                                                $(`.v1${q}`).append(`</div>`);
+                                                $(".init").append(`</div></hr><div class="container mt-1">`+
+                                `<div class="row">`+
+                                    `<div class="col-8">`+
+                                        `<p>Subtotal:</p>`+
+                                    `</div>`+
+                                    `<div class="col-4">`+
+                                        `<p class="text-secondary">${subtotal} tk</p>`+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`);
+                        });
+                        if(cx){
+                            $(".init").append(`<div class="container m-2">`+
+                                `<a class="p-2 border border-dark bg-secondary text-light" href="../cart">Go To Cart</a>`+
+                            `</div>`)
+                        }
+                        if(!cx){
+                            $(".init").append(`<p class="text-danger">Nothing In Your Cart</p>`);
+                        }
+                        
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

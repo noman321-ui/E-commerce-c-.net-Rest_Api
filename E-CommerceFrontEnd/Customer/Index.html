@@ -1,0 +1,1387 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/chart/exporting.js"></script>
+    <script src="../js/chart/highcharts.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Home/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../home"><b>JNFASHION&reg</b></a></div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-3 text-secondary cart" href="#"><i class="fa fa-shopping-bag fa-lg"></i></a>
+                    <a class="text-secondary profile" href="#"><i class="fa fa-user fa-lg"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="profile-div mr-3">
+            <div class="HoverAbleDivProfile">
+                <div class="row p-2 ">
+                    <div class="col">
+                        <ul class="profileList">
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-div mr-3">
+            <div class="HoverAbleDivCart">
+                <div class="row p-2">
+                    <div class="col init">
+                        
+                            
+                        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Home/manCategories.html/1">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/WomenCategories.html/2">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+
+
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col-2 border-right border-dark">
+                    <h3>My Account</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="removefocus" onclick="showsalevsregular(this)" href="#">Sale Vs Regular Order</a></li>
+                        <li><a onclick="showinfo(this)" class="text-secondary removefocus" href="#">Customer Info</a></li>
+                        <li><a class="text-secondary removefocus" href="#">Addresses</a></li>
+                        <li><a onclick="showpendingorders(this)" class="text-secondary removefocus" href="#">Pending Orders</a></li>
+                        <li><a onclick="showorders(this)" class="text-secondary removefocus" href="#">Orders</a></li>
+                        <li><a onclick="showreport(this)" class="text-secondary removefocus" href="#">Orders Report</a></li>
+                        <li><a class="text-secondary removefocus" onclick="showpasschanges(this)" href="#">Change Password</a></li>
+                        <li><a class="text-secondary removefocus" onclick="showreviews(this)" href="#">My Product Reviews</a></li>
+        
+                    </ul>
+                </div>
+                <div class="col-10 salevsregular" id="chart_div">
+        
+                </div>
+        
+                <div class="col-10 changepass " style="display:none">
+                    <div class="container text-center">
+                        <h4 class="text-dark"> Change Password</h4>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-5 text-left">
+                                <form id="chnfrm">
+                                    <input type="hidden" value="@Model.password" name="originalpass" id="currpass" />
+                                    <input type="hidden" value="@Model.CustomerID" name="CustomerID" id="uppascid" />
+                                    <div class="form-group">
+                                        <label for="CurrentPassword">Current Password</label>
+                                        <input type="text" class="form-control" name="password" id="CurrentPassword" placeholder="current password">
+                                        <p class="text-danger currenterr validaterr"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="NewPassword">New Password</label>
+                                        <input type="text" class="form-control" name="newpassword" id="NewPassword" placeholder="New Password">
+                                        <p class="text-danger newerr validaterr"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ConfirmPassword">Confirm Password</label>
+                                        <input type="text" class="form-control" name="confirmpassword" id="ConfirmPassword" placeholder="Confirm Password">
+                                        <p class="text-danger conerr validaterr"></p>
+                                    </div>
+                                    <button type="button" id="chnfrmbt" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 reviewdiv" style="display:none">
+                    <div class="container text-center rvwli">
+                        <h3 class="text-secondary">My Account - Product Reviews</h3>
+                        <br />
+                        
+                    </div>
+                </div>
+                <div class="col-10 ordersdiv" style="display:none">
+                    <br />
+                    <button id="btnExport" class="btn btn-light" type="button">Export To Pdf</button>
+                    <hr />
+                    <div class="container text-center mt-2">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="text-secondary">Order History</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container mx-0" id="tblorder1">
+                        <div class="container text-center" >
+                            <div class="row">
+                                <div class="col-1">
+                                    <p class="text-secondary">#</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">Date</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">PICTURE</p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="text-secondary">PRODUCT(S)</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">PRICE(৳)</p>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-secondary">Payment</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">QUANTITY</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">TOTAL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                   </div>
+                </div>
+        
+                <div class="col-10 pendingordersdiv" style="display:none">
+                    <br />
+                   
+                    <hr />
+                    <div class="container text-center mt-2">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="text-secondary">Pending Order History</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container mx-0" id="tblorder">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-1">
+                                    <p class="text-secondary">#</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">Date</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">PICTURE</p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="text-secondary">PRODUCT(S)</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">PRICE(৳)</p>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-secondary">Payment</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">QUANTITY</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">TOTAL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+        
+                <div class="col-10 reportdiv" style="display:none">
+                   
+
+
+                    <div class="jumbotron">
+                        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                    </div>
+
+
+
+
+   
+       
+
+                </div>
+                <div class="col-10 infodiv" style="display: none">
+                    <div class="container text-center">
+                        <h3 class="text-secondary">My Account - Customer Info</h3>
+                        <br />
+                        <h4 class="text-dark">YOUR PERSONAL DETAILS</h4>
+                    </div>
+                    <hr />
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 text-center">
+                                <form id="ajaxformsub">
+                                    
+                                </form>
+                            </div>
+                            <div class="col-9">
+        
+                               
+                                <form id="updatecus">
+                                    <div class="form-horizontal cusinfoi">
+        
+        
+   
+                                    </div>
+                                </form>
+        
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+        
+            </div>
+        </div>
+        <br />
+        
+        <div id="PasswordModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header deleteHeader">
+        
+                    </div>
+                    <div class="modal-body deleteBody">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            
+        function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+
+            $.ajax({
+            url: `http://localhost:49274/api/customer/reviewlist/${getCookie("userid")}`,
+            type: 'GET',
+           
+            complete: function (xmlHttp, status) {
+                if(xmlHttp.status ==200){
+                    var data1 = xmlHttp.responseJSON;
+                    $.each(data1, function(index, value){
+                        $(".rvwli").append(`
+                        
+                        <div class="container text-left">
+                            <div class="container">
+                                <p class="text-secondary text-uppercase">${value.ReviewTitle}</p>
+                            </div>
+    
+                            <hr />
+                            <div class="container">
+                                <p class="text-secondary">${value.Description}</p>
+                            </div>
+                            <div class="container">
+                                <p class="text-secondary">Product review for: <a class="text-secondary" href="../Product/Details?id=${value.ProductID}"><u>${value.Product.Product_name}</u></a> | Date: ${value.Date}</p>
+                            </div>
+                            <br />
+                        </div>
+                        
+                        `);
+                    });
+                }
+                
+            },
+            error: function () {
+                alert('Error occured');
+            }
+        });
+
+            $.ajax({
+            url : `http://localhost:49274/api/customer/GetOrderReportData/${getCookie("userid")}`,
+            method: `GET`,
+            success: function(data){
+            
+            Highcharts.chart('container', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Order by Category Ratio'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+
+                series: [{
+                    name: 'Brands',
+                    colorByPoint: true,
+                    data: [{
+                        name: 'MenCategory',
+                        y: data.MenCategory
+                    },
+                    {
+                        name: 'WomenCategory',
+                        y: data.WomenCategory
+                    },
+                    {
+                        name: 'LifeStyleCategory',
+                        y: data.LifeStyleCategory
+                    }]
+                }]
+            });
+        }
+        });
+
+            $.ajax({
+                url : `http://localhost:49274/api/customer/GetTotalOrders/${getCookie("userid")}`,
+                method: "GET",
+               
+                complete: function (xmlHttp, status) {
+                    if(xmlHttp.status == 200){
+                        var item = xmlHttp.responseJSON;
+                        var total = 0;
+                        var j = 1;
+                        var y = 0;
+                        
+                        $.each(item, function(index, value){
+                            y++;
+                            var i = 0;
+                            
+                            var image = (value.ProductHistory.ImageFile).split('|')[0];
+                            $("#tblorder1").append(`
+                            
+                            <div class="container text-center">
+            <div class="row">
+                <div class="col-1">
+                    <p class="text-secondary">${j}</p>
+                </div>
+                <div class="col-1">
+                    <p class="text-secondary">${(value.Order.date).substring(0, 10)}</p>
+                </div>
+                <div class="col-1">
+                    
+                    <img style="max-width:100%;" src="../image/${image}" alt="product_image" />
+
+                </div>
+                <div class="col-4">
+                    <div class="container text-center xx${y}">
+                        <p class="font-weight-bold">${value.ProductHistory.Product_name}</p>
+                    </div>
+                </div>
+                <div class="col-1 zz${y}">
+                </div>
+                <div class="col-2">
+                    <p>${value.Order.PayMentMethod}</p>
+                </div>
+                <div class="col-1">
+                    <p class="p-2 border border-secondary">${value.Order.Quantity}</p>
+                </div>
+                <div class="col-1 fsub${y}">
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+                            `);
+                            if (value.Order.Size != null)
+                        {
+                            $(`xx${y}`).append(`<p>SIZE:&nbsp;${value.Order.Size}</p>`);
+                        }
+                        if (value.ProductHistory.SaleHistory != null)
+                    {
+
+                        var p = Number(value.ProductHistory.UnitPrice);
+                        var v = Number(value.ProductHistory.SaleHistory.Amount) / 100;
+                        var c1 = (p - (p * v));
+                        $(`.zz${y}`).append(`<p><s>${value.ProductHistory.UnitPrice}</s> &nbsp; ${c1}</p>`);
+                        
+                    }
+                    else
+                    {
+                      
+                        var uprice = Number(value.ProductHistory.UnitPrice);
+                        $(`.zz${y}`).append(`<p>${value.ProductHistory.UnitPrice}</p>`);
+                    }
+                    var subtotal = 0;
+                    if (value.ProductHistory.SaleHistory != null)
+                    {
+
+                        var p = Number(value.ProductHistory.UnitPrice);
+                        var v = Number(value.ProductHistory.SaleHistory.Amount) / 100;
+                        var c1 = (p - (p * v));
+                        subtotal = Number(value.Order.Quantity * c1);
+                        total += subtotal;
+                    }
+                    else
+                    {
+                        subtotal = Number(value.Order.Quantity * value.ProductHistory.UnitPrice);
+                        total += subtotal;
+                    }
+                    $(`.fsub${y}`).append(`<p>৳ ${subtotal}</p>`);
+                    i++;
+                    j++
+                        });
+                    }
+                }
+            });
+            $.ajax({
+                url: `http://localhost:49274/api/customer/GetPendingOrders/${getCookie("userid")}`,
+               
+                method: "GET",
+               
+                complete: function (xmlHttp, status) {
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        var total = 0;
+                        var j = 1;
+                        var y = 0;
+                        
+                        $.each(data, function(index, value){
+                            y++;
+                            var i = 0;
+                            
+                            var image = (value.Product.ImageFile).split('|')[0];
+                            $("#tblorder").append(`
+                            
+                            <div class="container text-center">
+            <div class="row">
+                <div class="col-1">
+                    <p class="text-secondary">${j}</p>
+                </div>
+                <div class="col-1">
+                    <p class="text-secondary">${(value.TempOrder.date).substring(0, 10)}</p>
+                </div>
+                <div class="col-1">
+                    
+                    <img style="max-width:100%;" src="../image/${image}" alt="product_image" />
+
+                </div>
+                <div class="col-4">
+                    <div class="container text-center xx${y}">
+                        <p class="font-weight-bold">${value.Product.Product_name}</p>
+                    </div>
+                </div>
+                <div class="col-1 zz${y}">
+                </div>
+                <div class="col-2">
+                    <p>${value.TempOrder.PayMentMethod}</p>
+                </div>
+                <div class="col-1">
+                    <p class="p-2 border border-secondary">${value.TempOrder.Quantity}</p>
+                </div>
+                <div class="col-1 fsub${y}">
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+                            `);
+                            if (value.TempOrder.Size != null)
+                        {
+                            $(`xx${y}`).append(`<p>SIZE:&nbsp;${value.TempOrder.Size}</p>`);
+                        }
+                        if (value.Product.Sale != null)
+                    {
+
+                        var p = Number(value.Product.UnitPrice);
+                        var v = Number(value.Product.Sale.Amount) / 100;
+                        var c1 = (p - (p * v));
+                        $(`.zz${y}`).append(`<p><s>${value.Product.UnitPrice}</s> &nbsp; ${c1}</p>`);
+                        
+                    }
+                    else
+                    {
+                        
+                        var uprice = Number(value.Product.UnitPrice);
+                        $(`.zz${y}`).append(`<p>${value.Product.UnitPrice}</p>`);
+                    }
+                    var subtotal = 0;
+                    if (value.Product.Sale != null)
+                    {
+
+                        var p = Number(value.Product.UnitPrice);
+                        var v = Number(value.Product.Sale.Amount) / 100;
+                        var c1 = (p - (p * v));
+                        subtotal = Number(value.TempOrder.Quantity * c1);
+                        total += subtotal;
+                    }
+                    else
+                    {
+                        subtotal = Number(value.TempOrder.Quantity * value.Product.UnitPrice);
+                        total += subtotal;
+                    }
+                    $(`.fsub${y}`).append(`<p>৳ ${subtotal}</p>`);
+                    i++;
+                    j++
+                        });
+                        
+                    }
+                }
+            });
+            var chartData; // globar variable for hold chart data
+            google.load("visualization", "1", { packages: ["corechart"] });
+        
+            // Here We will fill chartData
+        
+            $(document).ready(function () {
+        
+                $.ajax({
+        
+                    url: 'http://localhost:49274/api/customer/SaleVsRegularOrderReport',
+                    
+                    dataType: "json",
+                    method: "POST",
+                    contentType: "application/json; chartset=utf-8",
+                    success: function (data) {
+                      
+                        chartData = data;
+        
+                    },
+                    error: function () {
+                        alert("Error loading data! Please try again.");
+        
+                    }
+                }).done(function () {
+                    // after complete loading data
+                    google.setOnLoadCallback(drawChart);
+                    drawChart();
+                });
+            });
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable(chartData);
+        
+                var options = {
+                    title: "Sale vs Regular Product Order",
+                    pointSize: 5
+                };
+        
+                var pieChart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                pieChart.draw(data, options);
+        
+            }
+        function CustomerInfoUpdate(data){
+            $.ajax({
+                url: `http://localhost:49274/api/customer/updateCustomerInfo/${getCookie("userid")}`,
+                method: 'PUT',
+                data: data,
+                
+                complete: function (xmlHttp, status) {
+                    if(xmlHttp.status == 200){
+                        var value  = xmlHttp.responseJSON;
+                        $("#CustomerName").val(value.CustomerName);
+                        $("#Email").val(value.Email);
+                        $("#PhoneNumber").val(value.PhoneNumber);
+                        $("#Username").val(value.Username);
+                    }
+                },
+                error: function () {
+                    alert('Error occured');
+                }
+            });
+        }
+
+            function CallService(file) {
+                        $.ajax({
+                            url: `http://localhost:49274/api/customer/updateImage/${getCookie("userid")}`,
+                            type: 'PUT',
+                            data: file,
+                            cache: false,
+                            processData: false,
+                            contentType: false,
+                            complete: function (xmlHttp, status) {
+                                if(xmlHttp.status ==200){
+                                    var data1 = xmlHttp.responseJSON;
+                                    $("#updateimg").val(data1.ImageFile);
+                                }
+                               
+                            },
+                            error: function () {
+                                alert('Error occured');
+                            }
+                        });
+                    }
+                    
+        $.ajax({
+            url : `http://localhost:49274/api/customer/GetDetails/${getCookie("userid")}`,
+            method: `GET`,
+            headers:{
+			"Authorization":"Basic "+btoa(`${getCookie("username")}`)
+		},
+            complete : function(xmlHttp, status){
+                if(xmlHttp.status == 401){
+                    window.location.href = "../Home";
+                }else{
+                var data = xmlHttp.responseJSON;
+                $("#currpass").val(data.password);
+                $("#uppascid").val(data.CustomerID);
+                $("#ajaxformsub").append(`
+                <input type="hidden" value = "${data.CustomerID}" name="CustomerID">
+                <input type="hidden" value = "${data.CustomerName}" name="CustomerName">
+                <input type="hidden" value = "${data.Email}" name="Email">
+                <input type="hidden" value = "${data.Gender}" name="Gender">
+                <input type="hidden" value = "${data.password}" name="password">
+                <input type="hidden" value = "${data.Username}" name="Username">
+                <input type="hidden" value = "${data.Address}" name="Address">
+                <input type="hidden" value = "${data.City}" name="City">
+                <input type="hidden" value = "${data.ZipCode}" name="ZipCode">
+                <input type="hidden" value = "${data.PhoneNumber}" name="PhoneNumber">
+                <input type="hidden" value = "${data.UserType}" name="usertype">
+                <div class="profile-pic-div">
+                                        <img src="../image/${data.ImageFile}" alt="profile pic" id="photo">
+                                        <input type="file" id="file" name="file">
+                                        <label for="file" id="uploadBtn">Choose Photo</label>
+                                    </div>
+                `);
+                $(".cusinfoi").append(`
+                <div class="form-group">
+                        <label for="CustomerName" class = "control-label col-md-2">CustomerName</label>
+                        
+                        <div class="col-md-10">
+                            <input class = "form-control" type="text" value="${data.CustomerName}" id="CustomerName" name="CustomerName">
+                            <div class="namerr"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class = "control-label col-md-2">Email</label>
+                        
+                        <div class="col-md-10">
+                            <input class = "form-control" type="text" value="${data.Email}" id="Email" name="Email">
+                            <div class="emerr"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber" class = "control-label col-md-2">PhoneNumber</label>
+                        
+                        <div class="col-md-10">
+                            <input class = "form-control" type="text" value="${data.PhoneNumber}" id="PhoneNumber" name="PhoneNumber">
+                            <div class="pherr"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" checked name="Gender" id="male" value="Male" checked>
+                    <label class="form-check-label" for="male">
+                        Male
+                    </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">
+                    <label class="form-check-label" for="female">
+                        Female
+                    </label>
+                    </div>
+                    
+                    <input type="hidden" value = "${data.CustomerID}" name="CustomerID">
+                    <input type="hidden" value = "${data.Address}" name="Address">
+                <input type="hidden" value = "${data.City}" name="City">
+                <input type="hidden" value = "${data.ZipCode}" name="ZipCode">
+                <input type="hidden" value = "${data.password}" name="password">
+                <input type="hidden" id="updateimg" value = "${data.ImageFile}" name="ImageFile">
+                <input type="hidden" value = "${data.UserType}" name="ImageFile">
+                <div class="form-group">
+                        <label for="Username" class = "control-label col-md-2">Username</label>
+                        
+                        <div class="col-md-10">
+                            <input class = "form-control" type="text" value="${data.Username}" id="Username" name="Username">
+                            <div class="userr"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="button" value="Save" id="udinfo" class="btn btn-default" />
+                                            </div>
+                                        </div>
+                `);
+                $("#CustomerName").change(function(){
+            if($("#CustomerName").val().length<1){
+                $(".namerr").empty();
+                $(".namerr").append(`<p class="text-danger stop">name is required</p>`);
+            }else{
+                $(".namerr").empty();
+            }
+        });
+        $("#Email").change(function(){
+            if($("#Email").val().length<1){
+                $(".emerr").empty();
+                $(".emerr").append(`<p class="text-danger stop">email is required</p>`);
+            }else{
+                $(".emerr").empty();
+            }
+        });
+        $("#PhoneNumber").change(function(){
+            if($("#PhoneNumber").val().length!=11){
+                $(".pherr").empty();
+                $(".pherr").append(`<p class="text-danger stop">number length should be 11</p>`);
+            }else{
+                $(".pherr").empty();
+            }
+        });
+        $("#Username").change(function(){
+            if($("#Username").val().length<1){
+                $(".userr").empty();
+                $(".userr").append(`<p class="text-danger stop">username is required</p>`);
+            }else{
+                $(".userr").empty();
+            }
+        });
+        $("#udinfo").click(function(){
+            if($("#Username").val().length<1){
+                $(".userr").empty();
+                $(".userr").append(`<p class="text-danger stop">username is required</p>`);
+            }
+            if($("#PhoneNumber").val().length!=11){
+                $(".pherr").empty();
+                $(".pherr").append(`<p class="text-danger stop">number length should be 11</p>`);
+            }
+            if($("#Email").val().length<1){
+                $(".emerr").empty();
+                $(".emerr").append(`<p class="text-danger stop">email is required</p>`);
+            }
+            if($("#CustomerName").val().length<1){
+                $(".namerr").empty();
+                $(".namerr").append(`<p class="text-danger stop">name is required</p>`);
+            }
+           
+            if($(".stop").length<1){
+                var data = $("#updatecus").serialize();
+                CustomerInfoUpdate(data);
+            }
+        });
+                const imgDiv = document.querySelector('.profile-pic-div');
+            const img = document.querySelector('#photo');
+            const file = document.querySelector('#file');
+            const uploadBtn = document.querySelector('#uploadBtn');
+        
+            //if user hover on img div
+        
+            imgDiv.addEventListener('mouseenter', function () {
+                uploadBtn.style.display = "block";
+            });
+        
+            //if we hover out from img div
+        
+            imgDiv.addEventListener('mouseleave', function () {
+                uploadBtn.style.display = "none";
+            });
+            $("#file").change(function (e) {
+            const choosedFile = this.files[0];
+
+            if (choosedFile) {
+
+                const reader = new FileReader(); //FileReader is a predefined function of JS
+
+                reader.addEventListener('load', function () {
+                    img.setAttribute('src', reader.result);
+                });
+
+                reader.readAsDataURL(choosedFile);
+
+
+            }
+
+            var formdata = new FormData($('#ajaxformsub').get(0));
+            CallService(formdata);
+
+           
+        });
+    }
+            
+            }
+        });
+        
+        
+            $("body").on("click", "#btnExport", function () {
+                html2canvas($('#tblorder')[0], {
+                    onrendered: function (canvas) {
+                        var data = canvas.toDataURL();
+                        var docDefinition = {
+                            content: [{
+                                image: data,
+                                width: 500
+                            }]
+                        };
+                        pdfMake.createPdf(docDefinition).download("Order-details.pdf");
+                    }
+                });
+            });
+        
+        
+            function showreport(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").show();
+                $(".infodiv").hide();
+                $(".changepass").hide();
+                $(".ordersdiv").hide();
+                $(".salevsregular").hide();
+                $(".reviewdiv").hide();
+                $(".pendingordersdiv").hide();
+            }
+            function showinfo(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".ordersdiv").hide();
+                $(".reviewdiv").hide();
+                $(".changepass").hide();
+                $(".salevsregular").hide();
+                $(".infodiv").show();
+                $(".pendingordersdiv").hide();
+            }
+            function showpendingorders(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".infodiv").hide();
+                $(".reviewdiv").hide();
+                $(".changepass").hide();
+                $(".salevsregular").hide();
+                $(".ordersdiv").hide();
+                $(".pendingordersdiv").show();
+            }
+        
+            function showorders(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".infodiv").hide();
+                $(".reviewdiv").hide();
+                $(".changepass").hide();
+                $(".salevsregular").hide();
+                $(".ordersdiv").show();
+                $(".pendingordersdiv").hide();
+            }
+        
+            function showreviews(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".infodiv").hide();
+                $(".ordersdiv").hide();
+                $(".changepass").hide();
+                $(".salevsregular").hide();
+                $(".reviewdiv").show();
+                $(".pendingordersdiv").hide();
+            }
+            //ddddddddddddddddddddddddddd
+        
+            function showsalevsregular(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".infodiv").hide();
+                $(".ordersdiv").hide();
+                $(".reviewdiv").hide();
+                $(".changepass").hide();
+                $(".salevsregular").show();
+                $(".pendingordersdiv").hide();
+            }
+        
+             function showpasschanges(element) {
+                $(".removefocus").addClass("text-secondary");
+                $(element).removeClass("text-secondary");
+                $(".reportdiv").hide();
+                $(".infodiv").hide();
+                $(".ordersdiv").hide();
+                 $(".reviewdiv").hide();
+                 $(".salevsregular").hide();
+                 $(".changepass").show();
+                 $(".pendingordersdiv").hide();
+            }
+            $("#CurrentPassword").change(function () {
+               
+                if ($("#CurrentPassword").val() != $("#currpass").val()) {
+                    $(".currenterr").empty();
+                    $(".currenterr").append(`<small class="text-danger err">current password didn't match</small>`);
+                } else {
+                    $(".currenterr").empty();
+                }
+            });
+            $("#NewPassword").change(function () {
+                if ($("#NewPassword").val().length < 4) {
+                    $(".newerr").empty();
+                    $(".newerr").append(`<small class="text-danger err">Minimum length for password is 4</small>`);
+                }else {
+                    $(".newerr").empty();
+                }
+            });
+            $("#ConfirmPassword").change(function () {
+                if ($("#ConfirmPassword").val().length < 4) {
+                    $(".conerr").empty();
+                    $(".conerr").append(`<small class="text-danger err">Minimum length for password is 4</small>`);
+                } else if ($("#NewPassword").val() != $("#ConfirmPassword").val()) {
+                    $(".conerr").empty();
+                    $(".conerr").append(`<small class="text-danger err">password doesn't match</small>`);
+                } else if ($("#NewPassword").val() == $("#ConfirmPassword").val()) {
+                    $(".conerr").empty();
+                    $(".newerr").empty();
+                } else {
+                    $(".conerr").empty();
+                }
+            });
+                $("#chnfrmbt").click(function(){
+                    if ($("#CurrentPassword").val().length < 1) {
+                    $(".currenterr").empty();
+                    $(".currenterr").append(`<small class="text-danger err">current password didn't match</small>`);
+                }
+                if ($("#ConfirmPassword").val().length < 1) {
+        
+                    $(".conerr").empty();
+                    $(".conerr").append(`<small class="text-danger err">confirm password required</small>`);
+                }
+                if ($("#NewPassword").val().length < 1) {
+                    $(".newerr").empty();
+                    $(".newerr").append(`<small class="text-danger err">New password required</small>`);
+                }
+                if ($(".err").length < 1){
+                    var value = $('#chnfrm').serialize();
+                    $.ajax({
+                        type: "post",
+                        url: 'http://localhost:49274/api/customer/UpdatePassword',
+                        data: value,
+                        complete: function (xmlHttp, status) {
+                            if (xmlHttp.status == 200) {
+                                var myModal = new bootstrap.Modal(document.getElementById('PasswordModal'));
+                                myModal.toggle();
+                                $(".modal-header").empty();
+                                $(".modal-body").empty();
+                                $(".modal-header").append(`<h5 class="modal-title">Success</h5><button type="button"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>`);
+                                $(".modal-body").append(`<p class="text-success">Password Updated successfully</p>`);
+                                $(".modal-body").append(`<button type = "button" class="ml-2 btn btn-primary" data-dismiss="modal">Close </button >`);
+                                $("#currpass").val($("#ConfirmPassword").val());
+                                $("#NewPassword").val("");
+                                $("#ConfirmPassword").val("");
+                                $("#CurrentPassword").val("");
+                            }
+                        }
+        
+                    });
+                    
+                }
+                });
+       
+        </script>
+
+
+
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark p-3 my-2">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="p-4 text-white" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <form class="form-inline">
+                        <p class="ml-1 p-2 mb-1">Newsletter!</p>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" id="inputgmail2" placeholder="enter gmail">
+                        </div>
+                        <button type="submit" class="ml-2 btn btn-secondary mb-2">subscribe</button>
+                    </form>
+                    <br>
+                    <p class="text-secondary text-center">
+                        JNFashion LTD
+                        <br>
+                        H-90, Flat-6a, R-20, Block-B
+                        <br>
+                        Kuril, Dhaka
+                        <br>
+                        Customer Support:+8801798724156
+                        <br>
+                        Email:jnabin2@gmail.com
+                    </p>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">
+                                SHIPPING & EXCHANGE
+                                POLICY
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">PRIVACY POLICY</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Terms and condition</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">About us</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Login info</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Size Guide</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">contact us</a>
+                        </li>
+                        <li class="text-secondary">
+                            helpline: 01798724156
+
+                        </li>
+
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">store location</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <p class="text-uppercase text-muted">copyright &copy; 2021 jnshop, all rights reserved. developed by team jn.</p>
+                </div>
+                <div class="col-md text-center">
+                    <ul class="list-unstyled folist">
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function () {
+            function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+        
+            $.ajax({
+                url: 'http://localhost:49274/api/product/getcartitem',
+                method : 'Get',
+                complete: function(xmlHttp, status){
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        
+                        var q=0;
+                        var cx = false;
+                        $.each(data, function(index, value){
+                            var subtotal = 0;
+                            q++;
+                            cx = true;
+                            var image = (value.product.ImageFile).split('|')[0];
+                            if(value.product.Sale != null){
+                                var p = Number(value.product.UnitPrice);
+                                var v = Number(Number(item.product.Sale.Amount)) / 100;
+                                var c = (p - (p * v));
+    
+                                subtotal += (Number(c) * Number(value.count));
+        
+                            }else{
+                                subtotal += (Number(value.product.UnitPrice) * value.count);
+                            }
+                            $(".init").append(`<div class="container mt-3 v1${q}">`+
+                                    `<div class="row items${q}">`+
+                                        `<div class="col-3 picture">`+
+                                           
+                                            `<img src="../image/${image}" alt="cartimage" style="max-width:100%"/>`+
+                                        `</div>`+
+                                        `<div class="col-9 information${q}">`+
+                                            `<div class="productname">`+
+                                                `<a class="font-weight-bold" href="../Product/Details?id=${value.product.ProductId}">${value.product.Product_name}</a>`+
+                                            `</div>`);
+                            if(value.size != null){
+                                $(`.information${q}`).append(`<div class="productsize">`+
+                                                    `<p class="text-secondary">Size:${value.size.SizeName}</p>`+
+                                                `</div>`);
+                            }
+                            $(`.information${q}`).append(`<div class="productprice${q}">`+
+                                                `<span class="p-2 border border-dark">${value.count}</span>`);
+                                                if(value.product.Sale != null){
+                                                    var p = Number(value.product.UnitPrice);
+                                                    var v = Number(item.product.Sale.Amount) / 100;
+                                                    var c = (p - (p * v));
+                                                    $(`.productprice${q}`).append(`<span class="ml-2"><s>৳ ${value.product.UnitPrice}</s> &nbsp; ৳ ${c}</span>`);
+                                                }else{
+                                                    $(`.productprice${q}`).append(`<span class="ml-2">৳ ${value.product.UnitPrice}</span>`);
+                                                }
+                                                $(`.information${q}`).append(`</div>`);
+                                                $(`.items${q}`).append(`</div>`);
+                                                $(`.v1${q}`).append(`</div>`);
+                                                $(".init").append(`</div></hr><div class="container mt-1">`+
+                                `<div class="row">`+
+                                    `<div class="col-8">`+
+                                        `<p>Subtotal:</p>`+
+                                    `</div>`+
+                                    `<div class="col-4">`+
+                                        `<p class="text-secondary">${subtotal} tk</p>`+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`);
+                        });
+                        if(cx){
+                            $(".init").append(`<div class="container m-2">`+
+                                `<a class="p-2 border border-dark bg-secondary text-light" href="../cart">Go To Cart</a>`+
+                            `</div>`)
+                        }
+                        if(!cx){
+                            $(".init").append(`<p class="text-danger">Nothing In Your Cart</p>`);
+                        }
+                        
+                    }
+                }
+            });
+
+            if(getCookie("username")!=null){
+                        
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Customer/Index.html?id=${getCookie("userid")}">${getCookie("username")}</a></li>`);
+                        $(".profileList").append(`<li><a href="../Logout">Logout</a></li>`);
+                    }else{
+                       
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Registration">Registration</a></li>`);
+                        $(".profileList").append(`<li><a href="../Login">Login</a></li>`);
+                    }
+
+            $.ajax({
+                url: 'http://localhost:49274/api/Category/NavBar',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        
+                        for (var i = 0; i < data.length; i++) {
+                            
+                            if(data[i].SubCatetories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].Category_id}/1">${data[i].Category_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li class="active">`+
+                    `<a href="#homeSubmenu ${data[i].Category_id}" data-toggle="collapse" aria-expanded="false">${data[i].Category_name}</a>`+
+                
+                    `<ul class="collapse list-unstyled" id="homeSubmenu ${data[i].Category_id}">`);
+                        for(var j=0; j<data[i].SubCatetories.length; j++){
+                            if(data[i].SubCatetories[j].FinalSubCategories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].SubCatetories[j].SubCategoryId}/1">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li>`+
+                                    `<a href="#NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}" data-toggle="collapse" aria-expanded="false">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                                    `<ul class="ml-4 collapse list-unstyled" id="NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}">`);
+                                for(var k=0; k<data[i].SubCatetories[j].FinalSubCategories.length; k++){
+                                    $(".components").append(`<li>`+
+                                                `<a href="/home/getProducts/${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCategoryId}/3">${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCate_name}</a>`+
+                                            `</li>`);
+                                }
+                                $(".components").append(`</ul>`);
+                                $(".components").append(`</li>`);
+                            }
+                        }
+                        $(".components").append(`</ul>`);
+                        $(".components").append(`</li>`);
+                            }
+                        }
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

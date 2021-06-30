@@ -1,0 +1,310 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="../css/style.css">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+    
+    <div class="ml-5 mt-3">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <form id="rform">
+                        <div class="form-horizontal">
+                            <h4>Customer Registration</h4>
+                            <hr />
+                           
+                            <div class="form-group">
+                                <label for="CustomerName" class = "control-label col-md-2">CustomerName</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="CustomerName" id="CustomerName">
+                                    <div class="namd"></div>
+                                </div>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="Email" class = "control-label col-md-2">Email</label>
+                                <div class="col-md-10">
+                                    <input type="email" class = "form-control" name="Email" id="Email">
+                                    <div class="emaild"></div>
+                                </div>
+                               
+                            </div>
+            
+                            <div class="form-group">
+
+                                <label for="Address" class = "control-label col-md-2">Address</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="Address" id="Address">
+                                    <div class="addd"></div>
+                                </div>
+
+                               
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="City" class = "control-label col-md-2">City</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="City" id="City">
+                                    <div class="ctyd"></div>
+                                </div>
+
+                               
+                            </div>
+            
+                            <div class="form-group">
+
+                                <label for="ZipCode" class = "control-label col-md-2">ZipCode</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="ZipCode" id="ZipCode">
+                                    <div class="zipd"></div>
+                                </div>
+                               
+                            </div>
+            
+                            <div class="form-group">
+
+                                <label for="PhoneNumber" class = "control-label col-md-2">Phone Number</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="PhoneNumber" id="PhoneNumber">
+                                    <div class="phnd"></div>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="form-group">
+
+                                <label for="ImageFile" class = "control-label col-md-2">ImageFile</label>
+                                <div class="col-md-10">
+                                    <input type="file" class = "form-control" name="file" required accept="image/*" />
+                                    <div class="id"></div>
+                                </div>
+
+                               
+                            </div>
+            
+                            <div class="form-group">
+                                <div class="container">
+                                    <div class="col-3">
+                                        <label class = "control-label col-md-2">Gender</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input class = "rd" type="radio" id="male"  name="Gender" checked value="male">
+                                        <label for="male" >Male</label><br>
+                                        <input class = "rd" type="radio" id="female" name="Gender" value="female">
+                                        <label for="female" >Female</label><br>
+                                    </div>
+                                </div>
+                               
+                                <div class="gd"></div>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="Username" class = "control-label col-md-2">Username</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="Username" id="Username">
+                                    <div class="ud"></div>
+                                </div>
+                               
+                            </div>
+            
+                            <div class="form-group">
+
+
+                                <label for="password" class = "control-label col-md-2">Password</label>
+                                <div class="col-md-10">
+                                    <input type="text" class = "form-control" name="password" id="password">
+                                    <div class="pasd"></div>
+                                </div>
+                               
+                            </div>
+            
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="button" value="Create" id="ufntn" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+         
+    </div>
+    <script>
+        $("#CustomerName").change(function(){
+            if($("#CustomerName").val().length<1){
+                $(".namd").empty();
+                $(".namd").append(`<p class="text-danger stop">name is required</p>`);
+            }else{
+                $(".namd").empty();
+            }
+        });
+        $("#Email").change(function(){
+            if($("#Email").val().length<1){
+                $(".emaild").empty();
+                $(".emaild").append(`<p class="text-danger stop">email is required</p>`);
+            }else{
+                $(".emaild").empty();
+            }
+        });
+        $("#Address").change(function(){
+            if($("#Address").val().length<1){
+                $(".addd").empty();
+                $(".addd").append(`<p class="text-danger stop">address is required</p>`);
+            }else{
+                $(".addd").empty();
+            }
+        });
+
+        $("#City").change(function(){
+            if($("#City").val().length<1){
+                $(".ctyd").empty();
+                $(".ctyd").append(`<p class="text-danger stop">city is required</p>`);
+            }else{
+                $(".ctyd").empty();
+            }
+        });
+        $("#ZipCode").change(function(){
+            if($("#ZipCode").val().length!=4){
+                $(".zipd").empty();
+                $(".zipd").append(`<p class="text-danger stop">zip code length should be 4</p>`);
+            }else{
+                $(".zipd").empty();
+            }
+        });
+        $("#PhoneNumber").change(function(){
+            if($("#PhoneNumber").val().length!=11){
+                $(".phnd").empty();
+                $(".phnd").append(`<p class="text-danger stop">number length should be 11</p>`);
+            }else{
+                $(".phnd").empty();
+            }
+        });
+        $(".rd").change(function(){
+            if($(".rd").val().length<1){
+                $(".gd").empty();
+                $(".gd").append(`<p class="text-danger stop">gender is required</p>`);
+            }else{
+                $(".gd").empty();
+            }
+        });
+        $("#Username").change(function(){
+            if($("#Username").val().length<1){
+                $(".ud").empty();
+                $(".ud").append(`<p class="text-danger stop">username is required</p>`);
+            }else{
+                $(".ud").empty();
+            }
+        });
+        $("#password").change(function(){
+            if($("#password").val().length<1){
+                $(".pasd").empty();
+                $(".pasd").append(`<p class="text-danger stop">password is required</p>`);
+            }else{
+                $(".pasd").empty();
+            }
+        });
+        function anothercall(data){
+          
+                $.ajax({
+                    url: 'http://localhost:49274/api/registration/AddImage',
+                    method:"POST",
+                    
+                    enctype: 'multipart/form-data',
+                    
+                    data: data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    complete: function (xmlHttp,status) {
+                        if(xmlHttp.status == 201){
+                            window.location.href = "../Login";
+                        }
+                    }
+                });
+                
+            }
+        $("#ufntn").click( function () { 
+            if($("#CustomerName").val().length<1){
+                $(".namd").empty();
+                $(".namd").append(`<p class="text-danger stop">name is required</p>`);
+            }
+            if($("#Email").val().length<1){
+                $(".emaild").empty();
+                $(".emaild").append(`<p class="text-danger stop">email is required</p>`);
+            }
+            if($("#Address").val().length<1){
+                $(".addd").empty();
+                $(".addd").append(`<p class="text-danger stop">address is required</p>`);
+            }
+
+            if($("#City").val().length<1){
+                $(".ctyd").empty();
+                $(".ctyd").append(`<p class="text-danger stop">city is required</p>`);
+            }
+
+            if($("#ZipCode").val().length!=4){
+                $(".zipd").empty();
+                $(".zipd").append(`<p class="text-danger stop">zip code length should be 4</p>`);
+            }
+            if($("#PhoneNumber").val().length!=11){
+                $(".phnd").empty();
+                $(".phnd").append(`<p class="text-danger stop">number length should be 11</p>`);
+            }
+
+            if($(".rd").val().length<1){
+                $(".gd").empty();
+                $(".gd").append(`<p class="text-danger stop">gender is required</p>`);
+            }
+
+            if($("#Username").val().length<1){
+                $(".ud").empty();
+                $(".ud").append(`<p class="text-danger stop">username is required</p>`);
+            }
+            if($("#password").val().length<1){
+                $(".pasd").empty();
+                $(".pasd").append(`<p class="text-danger stop">password is required</p>`);
+            }
+            
+           
+            if($(".stop").length<1){
+                var data = $("#rform").serialize();
+                var valdata = new FormData($('form').get(0));
+                var id;
+                
+                $.ajax({
+                    url: 'http://localhost:49274/api/registration/create',
+                    method: 'POST',
+                    data: data,
+                    complete : function(xmlHttp, status){
+                       if(xmlHttp.status == 204){
+                        $(".ud").append(`<p class="text-danger">Username already exits</p>`);
+                       }
+                        if(xmlHttp.status == 200){
+                            
+                            anothercall(valdata);
+                        }
+                    }
+                });
+
+            }
+         } );
+    </script>
+</body>
+</html>

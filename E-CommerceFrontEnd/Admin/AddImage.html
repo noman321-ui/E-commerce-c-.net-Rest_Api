@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ReviewList">Review</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ProductCount">ProductCount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/OrderHistory">OrderHistory</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../Admin"><b>Home&reg</b></a></div>
+            <div class="dropdown show">
+                <a class="btn btn-white text-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Report
+                </a>
+        
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="../Admin/mencategoryReportdetails.html">MenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/womencategoryReportdetails.html">WomenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/lifestylecategoryReportdetails.html">LifestyleCategory Report</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddManager.html">Add Manager</a>
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddProduct.html">Add Product</a>
+                    <a class="mr-2 text-secondary profile" href="../Admin/AdminProfile.html"><i class="fa fa-user fa-lg"></i></a>
+                    <a class="text-secondary profile" href="../Logout">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+
+   
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/WomenCategories.html">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/lifestylesCategories.html">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/ReviewList.html">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="../Admin/ProductCount.html">ProductCount</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+       
+
+        <div class="container">
+            <form id="imgadd">     
+                <div class="form-horizontal addimgdiv">
+                    <h4>Add Product Image</h4>
+                    <hr />
+                   
+                    <div class="form-group pname">
+                        
+                    </div>
+
+                    <div class="form-group pdiscription">
+                       
+                    </div>
+        
+        
+        
+                    <div class="form-group">
+                        <label class = "control-label col-md-2" for="imgfile">Upload Image For Product</label>
+                        
+                        <div class="col-md-7">
+                            <input class="form-control-file" type="file" name="files" id="imgfile" accept="image/*" multiple required />
+                        
+                        </div>
+            
+                    </div>
+                    
+        
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="button" value="Add Size" class="btn btn-default" onclick="ajaxfunc();" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            return results[1] || 0;
+        }
+        var pid = $.urlParam('pid');
+            $.ajax({
+               url : `http://localhost:49274/api/admin/getbyproductid/${pid}`,
+               method: 'GET',
+               data : pid,
+               complete : function(xmlHttp,status){
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                       
+                        $(".pname").append(`<label for="Product_names" class="control-label col-md-2">Product Name</label>`+
+                `<div class="col-md-7">`+
+                    `<input type="text" class="form-control" value="${data["Product_name"]}" name="Product_name" readonly id="Product_names">`+
+                    
+                `</div>`);
+                $(".pdiscription").append(`<label for="Product_Descriptions" class="control-label col-md-2">Product Description</label>`+
+                `<div class="col-md-7">`+
+                    `<input type="text" class="form-control" value="${data["Description"]}" name="Description" readonly id="Product_Descriptions">`+
+                    
+                `</div>`);
+              
+                    }
+               }
+            });
+
+            function ajaxfunc(){
+                var valdata = new FormData($('form').get(0));
+               
+                $.ajax({
+                    
+                    url: 'http://localhost:49274/api/admin/AddImage',
+                    method:"POST",
+                    
+                    enctype: 'multipart/form-data',
+                    
+                    data: valdata,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    complete: function (xmlHttp,status) {
+                        
+                        if(xmlHttp.status == 201){
+                                var data = xmlHttp.responseJSON;
+                               
+                                if(data["SizeCategory"] != "other"){
+                                    window.location.href = `../admin/AddSize.html?pid=${data["ProductId"]}`;
+                                }else{
+                                    window.location.href = "../admin";
+                                }
+                            }
+                    },
+                    error: function () {
+                        alert('Error occured');
+                    }
+                });
+            }
+        </script>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

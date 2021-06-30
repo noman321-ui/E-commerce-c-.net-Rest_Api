@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ReviewList">Review</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ProductCount">ProductCount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/OrderHistory">OrderHistory</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../Admin"><b>Home&reg</b></a></div>
+            <div class="dropdown show">
+                <a class="btn btn-white text-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Report
+                </a>
+        
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="../Admin/mencategoryReportdetails.html">MenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/womencategoryReportdetails.html">WomenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/lifestylecategoryReportdetails.html">LifestyleCategory Report</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddManager.html">Add Manager</a>
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddProduct.html">Add Product</a>
+                    <a class="mr-2 text-secondary profile" href="../Admin/AdminProfile.html"><i class="fa fa-user fa-lg"></i></a>
+                    <a class="text-secondary profile" href="../Logout">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+
+   
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/WomenCategories.html">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/lifestylesCategories.html">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/ReviewList.html">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="../Admin/ProductCount.html">ProductCount</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+   
+    <form id="friendform" >
+
+      
+
+        <div class="form-horizontal">
+            <h4>Product</h4>
+            <hr />
+           
+
+            <div class="form-group">
+                <label for="dropDownId" class="control-label col-md-2"> Select Category </label>
+
+                <div class="col-md-7">
+                    <select class="form-control custom-select2" id="category" name="cate">
+                       
+                    </select>
+                    <script>
+                        $.ajax({
+                            url:"http://localhost:49274/api/admin/mainCategories",
+                            method:"GET",
+                            complete:function(xmlHttp,status){
+                                if(xmlHttp.status == 200){
+                                    var data = xmlHttp.responseJSON;
+                                    $.each(data, function(index, value){
+                                        if(value["SubCatetories"].length > 0){
+                                            if(value["Category_name"] == "Sale"){
+                                                return true;
+                                            }
+                                            $("#category").append(`<optgroup label="${value["Category_name"]}" class="maincate">`);
+                                            $.each(value["SubCatetories"], function(index2, value2){
+                                                if(value2["FinalSubCategories"].length > 0){
+                                                    if(value2["SubCategory_name"] == "New In"){
+                                                        return true;
+                                                    }
+                                                    $("#category").append(`<optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;${value2["SubCategory_name"]}">`);
+                                                    $.each(value2["FinalSubCategories"], function(index3, value3){
+                                                        $("#category").append(`<option value="f ${value3["FinalSubCategoryId"]}">${value3["FinalSubCate_name"]}</option>`);
+                                                    });
+                                                    $("#category").append(`</optgroup>`);
+                                                }else{
+                                                    $("#category").append(`<option value="s ${value2["SubCategoryId"]}">${value2["SubCategory_name"]}</option>`);
+                                                }
+                                            });
+                                            $("#category").append(`</optgroup>`);
+                                        }else{
+                                            $("#category").append(`<option value="m ${value["MainCategoryId"]}">${value["Category_name"]}</option>`);
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+               
+                <label for="SizeCategory" class="control-label col-md-2">SizeCategory</label>
+                <div class="col-md-7">
+                    <select name="SizeCategory" class="form-control" id="sizecategory">
+                        <option value="dress">Dress</option>
+                        <option value="shoe">Shoes</option>
+                        <option value="pant">Pants</option>
+                        <option value="other">others</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+               
+                <label for="Product_names" class="control-label col-md-2">Product Name</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control namvalidate" onchange="validatenam();" name="Product_name" id="Product_names">
+                    <div class="name"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+               
+                <label for="Product_Descriptions" class="control-label col-md-2">Product Description</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control desvalidate" name="Description" id="Product_Descriptions">
+                    <div class="desc"></p>
+                </div>
+            </div>
+
+
+            <div class="form-group hideableinput">
+
+            </div>
+
+            <div class="form-group">
+               
+                <label for="UnitPrice" class="control-label col-md-2">UnitPrice</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control pricefield" name="UnitPrice" id="UnitPrice">
+                    <div class="container priceerror unitprice"></div>
+                    
+                </div>
+                
+            </div>
+
+           
+            <div class="form-group">
+               
+                <label for="Cost" class="control-label col-md-2">Product Cost</label>
+                <div class="col-md-7">
+                    <input class="form-control costvalidation" type="text" name="Cost" id="Cost" />
+                    <div class="container priceerror cost"></div>
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" onclick="getvalue()"  value="Add" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+       
+        $("#sizecategory").change(function () {
+
+            var value = $("#sizecategory").val();
+
+            if (value == "other") {
+               
+                $(".hideableinput").append(`<label for="OnHand" class="control-label col-md-2">OnHand</label>`+
+                `<div class="col-md-7">`+
+                    `<input type="text" class="form-control onhandvalidate" name="OnHand" id="OnHand">`+
+                    `<div class="container onhanderror"></div>`+
+                    
+                `</div>`);
+            } else {
+                $(".hideableinput").empty();
+            }
+        });
+        
+        $(".onhandvalidate").change(function () {
+            var value = $(".onhandvalidate").val();
+           
+            if (value.length < 1) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p style="color:red" class="stopsubmit">OnHand field is required</p>`);
+            } else if (isNaN(value)) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p style="color:red" class="stopsubmit">OnHand value must be number</p>`);
+            } else if ((parseInt(value)) < 1 || (parseInt(value)) > 500) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p class="stopsubmit text-danger">OnHand value must be between 1 to 500</p>`);
+            } else {
+                $(".onhanderror").empty();
+            }
+        });
+        $(".costvalidation").change(function () {
+            if($(".costvalidation").val().length<1){
+            $(".cost").empty();
+            $(".cost").append(`<p class="text-danger stopsubmit">Cost is required</p>`);
+            }
+            else if(!$.isNumeric($(".costvalidation").val())){
+                $(".cost").empty();
+            $(".cost").append(`<p class="text-danger stopsubmit">Cost should be numeric</p>`);
+            }
+            else if ((Number)($(".costvalidation").val()) >= (((Number)($(".pricefield").val()))*0.5)) {
+                $(".priceerror").empty();
+                $(".priceerror").append(`<p class="stopsubmit text-danger">Cost amount should be smaller than half of unit price</p>`);
+            } else {
+                $(".priceerror").empty();
+            }
+        });
+        function validatenam(){
+            if($(".namvalidate").val().length < 1){
+                
+                $(".name").empty();
+                $(".name").append(`<p class="text-danger stopsubmit">product name is required</p>`);
+            }else{
+                $(".name").empty();
+            }
+        }
+       
+        $(".pricefield").change(function () {
+            
+            if($(".pricefield").val().length<1){
+
+                $(".unitprice").empty();
+                $(".unitprice").append(`<p class = "stopsubmit text-danger">Unit Price is required</p>`);
+            }
+            else if(!$.isNumeric($(".pricefield").val())){
+                $(".unitprice").empty();
+                $(".unitprice").append(`<p class = "stopsubmit text-danger">Unit Price should be numeric</p>`);
+            }
+            else if ((Number)($(".costvalidation").val()) >= (((Number)($(".pricefield").val())) * 0.5)) {
+                $(".priceerror").empty();
+                $(".priceerror").append(`<p class="stopsubmit" style="color:red">Cost amount should be smaller than half of unit price</p>`);
+            } else {
+                $(".priceerror").empty();
+            }
+        });
+        
+        $("#Product_Descriptions").change(function(){
+            
+            if($("#Product_Descriptions").val().length < 5){
+                $(".desc").empty();
+                $(".desc").append(`<p class="text-danger stopsubmit">products description should be greater than 4 characters</p>`);
+                
+            }else{
+                $(".desc").empty();
+            }
+        });
+        
+        function getvalue() {
+            if($(".namvalidate").val().length < 1){
+                $(".name").empty();
+                $(".name").append(`<p class="text-danger stopsubmit">product name is required</p>`);
+            }
+            if($("#Product_Descriptions").val().length < 5){
+                $(".desc").empty();
+                $(".desc").append(`<p class="text-danger stopsubmit">products description should be greater than 4 characters</p>`);
+            }
+
+            if($(".pricefield").val().length<1){
+            $(".unitprice").empty();
+            $(".unitprice").append(`<p class = "stopsubmit text-danger">Unit Price is required</p>`);
+            }
+
+            if($(".costvalidation").val().length<1){
+            $(".cost").empty();
+            $(".cost").append(`<p class="text-danger stopsubmit">Cost is required</p>`);
+            }
+        
+            if ($(".onhandvalidate").length > 0) {
+                var value = $(".onhandvalidate").val();
+                if (value.length < 1) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p  class="text-danger stopsubmit">OnHand field is required</p>`);
+            } else if (isNaN(value)) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p style="color:red" class="text-danger stopsubmit">OnHand value must be number</p>`);
+            } else if ((parseInt(value)) < 1 || (parseInt(value)) > 500) {
+                $(".onhanderror").empty();
+                $(".onhanderror").append(`<p class="stopsubmit text-danger">OnHand value must be between 1 to 500</p>`);
+            }
+            else{
+                $(".onhanderror").empty();
+            } 
+            }
+            
+        
+            if ($(".stopsubmit").length < 1 ){
+                
+                var selected = $('#category').val();
+                
+                var data = $("#friendform").serialize();
+                
+                if (selected[0] === "s") {
+                    selected = selected.substring(2);
+                    data += `&SubCategoryId=${selected}`;
+                } else if (selected[0] === "m") {
+                    selected = selected.substring(2);
+                    
+                    data += `&MainCategoryId=${selected}`;
+                } else {
+                    selected = selected.substring(2);
+                    data += `&FinalSubCategoryId=${selected}`;
+                    
+                    }
+                alert(data);
+                $.ajax({
+                url: 'http://localhost:49274/api/admin/AddProduct',
+                method:"POST",
+		        headers:"Content-Type:application/json",
+                data:data,
+                complete: function (xmlHttp,status) {
+                    if(xmlHttp.status == 200){
+                            var data = xmlHttp.responseJSON;
+                            
+                            window.location.href = `../admin/AddImage.html?pid=${data["ProductId"]}`;
+                        }
+                },
+                error: function () {
+                    alert('Error occured');
+                }
+            });
+        
+        }
+        
+        
+    }
+    </script>
+
+        </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
+

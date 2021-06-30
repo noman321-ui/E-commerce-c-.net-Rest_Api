@@ -1,0 +1,897 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Home/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../home"><b>JNFASHION&reg</b></a></div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-3 text-secondary cart" href="#"><i class="fa fa-shopping-bag fa-lg"></i></a>
+                    <a class="text-secondary profile" href="#"><i class="fa fa-user fa-lg"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="profile-div mr-3">
+            <div class="HoverAbleDivProfile">
+                <div class="row p-2 ">
+                    <div class="col">
+                        <ul class="profileList">
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-div mr-3">
+            <div class="HoverAbleDivCart">
+                <div class="row p-2">
+                    <div class="col init">
+                        
+                            
+                        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Home/manCategories.html/1">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/WomenCategories.html/2">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/lifestylesCategories.html/3">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+    
+        
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="p-2 border border-dark bg bg-secondary text-light" id="#delivery">1 Delivery Address</p>
+                    <br />
+                    <div class="container mx-3" id="deliveryCotentHidden">
+                        <form id="ajaxsubmit">
+        
+        
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-12">
+        
+                    <p class="p-2 border border-darkbg bg-secondary text-light" id="paymentcontent">2 Payment Method</p>
+                    <br />
+                    <form id="ajaxsubmit2">
+                        <div class="container mx-3" id="paycontenthideable" style="display:none">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="container paymentlogo">
+                                        <img src="../image/cash.png" style="width:261px" alt="cod" />
+                                    </div>
+                                    <div class="container info">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentmethod" id="cod" checked value="Cash_On_Delivery">
+                                            <label class="form-check-label text-secondary" for="cod">
+                                                Cash On Delivery(COD)
+                                            </label>
+                                            <small class="text-secondary">pay by cash on delivery</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="container paymentlogo">
+                                        <img src="../image/paypal-logo.png" style="height:170px" alt="paypallogo" />
+                                    </div>
+                                    <div class="container info">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentmethod" id="paypal"  value="PayPal">
+                                            <label class="form-check-label text-secondary" for="paypal">
+                                                PayPal
+                                            </label>
+                                            <small class="text-secondary">You will be redirected to PayPal website to complete the payment</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#delivery" onclick="paymentback()" p-3 id="backtoshippingaddress" class="btn btn-light border border-dark">Back</a>
+                                    <button type="button" id="PaymentChooseButton" class="btn btn-dark">Continue</button>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-12">
+        
+                    <p class="p-2 border border-darkbg bg-secondary text-light" id="OrderInformationContent">3 Order Information</p>
+                    <br />
+                    <div class="container" id="OrderInformationContentHideAble" style="display:none">
+                        <div class="container text-center mx-3">
+                            <div class="row">
+                                <div class="col-2">
+                                    <p class="text-secondary">#</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">PICTURE</p>
+                                </div>
+                                <div class="col-5">
+                                    <p class="text-secondary">PRODUCT(S)</p>
+                                </div>
+                                <div class="col-2">
+                                    <p class="text-secondary">PRICE(৳)</p>
+                                </div>
+                                <div class="col-">
+                                    <p class="text-secondary">QUANTITY</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="text-secondary">TOTAL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="ordinf"></div>
+                    
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <script>
+
+                $.ajax({
+                    url : 'http://localhost:49274/api/cart/index',
+                    method : "GET",
+                    complete : function(xmlHttp, status){
+                        if(xmlHttp.status == 200)
+                        {
+                            var data = xmlHttp.responseJSON;
+                            var flag = false;
+                            var j = 1;
+                            var i = 0;
+                            var c1 = 0;
+                            var total = 0;
+                            
+                            var y=0;
+                            $.each(data, function(index, value){
+                               
+                                y++;
+                               
+                                var image = (value.product.ImageFile).split('|')[0];
+                                $(".ordinf").append(`<div class="container text-center mx-3"><div class="row fll${y}"><div class="col-2"><p class="text-secondary">${j}</p> </div><div class="col-1"><img style="max-width:100%;" src="../image/${image}" alt="product_image"/>`+
+                                    `</div>`+
+                                    `<div class="col-5 vvv${y}">`+
+                                        `<div class="container nam${y} text-center">`+
+                                        `<p class="font-weight-bold">${value.product.Product_name}</p>`);
+                                        
+                                if(value.size != null){
+                                    $(`.nam${y}`).append(`<p>SIZE:&nbsp;${value.size.SizeName}</p>`);
+
+                                }
+                                  
+                                $(`.vvv${y}`).append(`</div>`);
+                                $(`.fll${y}`).append(`</div>`);
+                                $(`.fll${y}`).append(`<div class="col-2 fls${y}">`);
+                                if(value.product.Sale){
+                                    var p = Number(value.product.UnitPrice);
+                                    var v = Number(item.product.Sale.Amount) / 100;
+                                    c1 = (p - (p * v));
+                                    $(`.fls${y}`).append(`<p><s>${value.product.UnitPrice}</s> &nbsp; ${c1}</p>`);
+                                }else{
+                                    $(`.fls${y}`).append(`<p>${value.product.UnitPrice}</p>`);
+                                }
+                                $(`.fll${y}`).append(`</div><div class="col-1"><p class="p-2 border border-secondary">${value.count}</p></div>`);
+                                var subtotal = 0;
+                                
+                                if (value.product.Sale != null)
+                                {
+                                     subtotal = Number(value.count * c1);
+                                    total += subtotal;
+                                }
+                                else
+                                {
+                                     subtotal = Number(value.count * value.product.UnitPrice);
+                                    total += subtotal;
+                                }
+                                $(`.fll${y}`).append(`<div class="col-1"><p>৳ ${subtotal}</p></div>`);
+                                $(`.vvv${y}`).append(`</div>`);
+                            $(".ordinf").append(`</div><hr/>`);
+                                i++;
+                                j++;
+                            });
+                            $(".ordinf").append(`
+
+                            <div class="container ml-5 mx-3">
+                                <div class="row">
+                                    <div class="col-9"></div>
+                                    <div class="col-3">
+                                        <div class="bg-light p-2 mt-1 mr-3">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        Sub-Total:&nbsp;
+                                                    </td>
+                                                    <td>
+                                                        ৳ ${total}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Shipping:&nbsp;
+                                                    </td>
+                                                    <td>
+                                                        ৳ 0.00
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Total:&nbsp;
+                                                    </td>
+                                                    <td>
+                                                        ৳ ${total}
+                                                    </td>
+                                                </tr>
+                                            </table>
+        
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+        
+                            </div>
+
+                            `);
+                        }
+
+                    }
+
+                });
+                function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+           function callaj(valdata){
+            $.ajax({
+                url: 'http://localhost:49274/api/customer/updateInfoDuringCheckout',
+                method: "PUT",
+                data: valdata,
+                complete: function (xmlHttp, status) {
+                    
+                    if (xmlHttp.status == 200) {
+                        
+                        $("#deliveryCotentHidden").hide();
+                        $("#paycontenthideable").show();
+                        window.location = "#paycontenthideable";
+                    }
+                    else {
+                        alert("Error occurs in updating customer details");
+                    }
+                }
+            });
+           }
+            $.ajax({
+                url: `http://localhost:49274/api/cart/Checkout/${getCookie("userid")}`,
+                method: 'GET',
+                complete: function (xmlHttp, status) {
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        var Model = data;
+                       
+                        $("#ajaxsubmit").append(`
+
+                        <input type="hidden" id="idfield" name="CustomerID" value="${Model.customer.CustomerID}" />
+                            <input type="hidden" id="typefield" name="usertype" value="${Model.customer.usertype}" />
+                            <input type="hidden" id="unamefield" name="Username" value="${Model.customer.Username}" />
+                            <input type="hidden" id="passfield" name="password" value="${Model.customer.password}" />
+                            <input type="hidden" id="imagefield" name="ImageFile" value="${Model.customer.ImageFile}" />
+                            <input type="hidden" id="genderfield" name="Gender" value="${Model.customer.Gender}" />
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="CustomerName" value="${Model.customer.CustomerName}">
+                                <p style="color:red" class="errorin cname"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" name="Email" value="${Model.customer.Email}">
+                                <p style="color:red" class="errorin cemail"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Country">Country</label>
+                                <input type="text" readonly class="form-control" id="Country" value="Bangladesh">
+                                <p style="color:red" class="errorin ccountry"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="City">City</label>
+                                <input type="text" class="form-control" id="City" name="City" value="${Model.customer.City}">
+                                <p style="color:red" class="errorin ccity"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Address">Address</label>
+                                <input type="text" class="form-control" id="Address" name="Address" value="${Model.customer.Address}">
+                                <p style="color:red" class="errorin caddress"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Zip">Zip Code</label>
+                                <input type="text" class="form-control" id="Zip" name="ZipCode" value="${Model.customer.ZipCode}">
+                                <p style="color:red" class="errorin czip"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="number" class="text-secondary">Phone Number</label>
+                                <input type="text" class="form-control" id="number" name="PhoneNumber" value="${Model.customer.PhoneNumber}">
+                                <p style="color:red" class="errorin cnumber"></p>
+                            </div>
+                            <button type="button" id="shippingaddressbutton" class="btn btn-dark">Continue</button>
+
+                        `);
+                        $("#name").change(function () {
+                    if ($("#name").val().length < 2 || $("#name").val().length > 15) {
+                        $(".cname").append(`<span class="emrm">name length should be between 2 to 15</span>`);
+                    } else {
+                        $(".cname").empty();
+                    }
+                });
+                $("#email").change(function () {
+                    var mailformat = /\S+@@\S+\.\S+/;
+                    if ($("#email").val().match(mailformat)) {
+                        $(".cemail").empty();
+        
+                    } else {
+                        $(".cemail").append(`<span class="emrm">invalid email</span>`);
+                    }
+                });
+                $("#Zip").change(function () {
+                    if (isNaN($("#Zip").val()) || parseInt($("#Zip").val()) < 1000 || parseInt($("#Zip").val()) > 9999 || $("#Zip").val().length<1 ) {
+                        $(".czip").append(`<span class="emrm">invalid zip code, length should be 4 character with all number</span>`);
+                    } else {
+                        $(".czip").empty();
+                    }
+                });
+                $("#City").change(function () {
+                    if ($("#City").val().length < 4 || $("#City").val().length > 15 || !isNaN($("#City").val())) {
+                        $(".ccity").append(`<span class="emrm">invalid city name, length should be between 4 to 15, type string</span>`);
+                    } else {
+                        $(".ccity").empty();
+                    }
+                });
+                $("#Address").change(function () {
+                    if ($("#Address").val().length < 8 || $("#Address").val().length > 20 || !isNaN($("#Address").val())) {
+                        $(".caddress").append(`<span class="emrm">invalid Address name, length should be between 8 to 20, type string</span>`);
+                    } else {
+                        $(".caddress").empty();
+                    }
+                });
+        
+                $("#number").change(function () {
+                    if (!$("#number").val().startsWith("+8801") || $("#number").val().length != 14) {
+                        $(".cnumber").append(`<span class="emrm">Provide valid phone number with +8801</span>`);
+                    } else {
+                        $(".cnumber").empty();
+                    }
+                });
+
+                $("#shippingaddressbutton").click(function () { 
+               
+                    if ($(".emrm").length <1){
+                        
+                        var valdata = $("#ajaxsubmit").serialize(); 
+                        callaj(valdata);
+                        
+                    }
+                 });
+
+                $.each(data, function (index, value) {
+                    
+                    });
+                    }
+                }
+            });
+            
+                 $("#PaymentChooseButton").click(function () { 
+
+                    var paymentmethod = $("input[name='paymentmethod']:checked").val();
+                    
+                    document.cookie = `paymentmethod=${paymentmethod};path=/`;
+
+                    $("#paycontenthideable").hide();
+                    $(".emptyoncall").remove();
+                    $(".delete").remove();
+                    $("#OrderInformationContentHideAble").append(`<div class="container mx-3 emptyoncall"><div class="container"><p>Shipping Information</p>` +
+                        `<table class="bg bg-light p-3 border border-secondary">` +
+                        `<tr>` +
+                        `<td> Customer Name </td>` +
+                        `<td> : </td>` +
+                        `<td> ${$("#name").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` + `<td> Customer Email </td>` +
+                        `<td> : </td>` +
+                        `<td>${$("#email").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` +
+                        `<td> City Name</td>` +
+                        `<td> : </td>` +
+                        `<td>${$("#City").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` +
+                        `<td> Zip Code</td>` +
+                        `<td> : </td>` +
+                        `<td>${$("#Zip").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` +
+                        `<td> Address</td>` +
+                        `<td> : </td>` +
+                        `<td>${$("#Address").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` +
+                        `<td> Contact Numbe </td>` +
+                        `<td> : </td>` +
+                        `<td>${$("#number").val()}</td>` +
+                        `</tr>` +
+                        `<tr>` +
+                        `<td> Payment Method </td>` +
+                        `<td> : </td>` +
+                        `<td>${$("input[name='paymentmethod']:checked").val()}</td>` +
+                        `</tr>` +
+                        `</table></div>` +
+                        `<br />` +
+                        `<div class="row mx-1">` +
+                        `<div class="col-6 paymentselection">` +
+                        `<a href="#" onclick="Infoback()" class="mr-1 btn btn-light border border-dark">Back</a>` +
+                        
+                        `</div>` +
+                        `</div>` +
+                        `</div>`);
+                    if (paymentmethod == "PayPal") {
+                        $(".removelink").remove();
+                        $(".paymentselection").append(`<a class="border border-secondary text-light bg bg-dark p-2 removelink" style="border-radius:10px" href="../Payment/PaymentWithPaypal">Confirm</a>`);
+                    } else if (paymentmethod == "Cash_On_Delivery") {
+                        $(".removelink").remove();
+                        $(".paymentselection").append(`<a class="border border-secondary text-light bg bg-dark p-2 removelink" style="border-radius:10px" href="#" id="codi">Confirm</a>`);
+                        $("#codi").click(function(){
+                            
+                            $.ajax({
+                                url: `http://localhost:49274/api/order/UpdateOrderInformation/${getCookie("userid")}`,
+                                method: 'GET',
+                                data : {
+                                    "paymentmethod" : "Cash On Delivery"
+                                },
+                                complete: function (xmlHttp, status) {
+                                    if(xmlHttp.status == 200){
+                                        window.location.href = "../Order/SuccessView.html";
+                                    }
+                                }
+                            });
+                        });
+                    }
+                    $("#OrderInformationContentHideAble").show();
+
+                        window.location = "#OrderInformationContentHideAble";
+                    
+                });
+                        
+                function Infoback() {
+                    $("#OrderInformationContentHideAble").hide();
+                    $("#paycontenthideable").show();
+                    window.location = "#paycontenthideable";
+                }
+               
+                function paymentback() {
+                    $("#paycontenthideable").hide();
+                    $("#deliveryCotentHidden").show();
+                    window.location = "#deliveryCotentHidden";
+                }
+            </script>
+        
+        
+        
+
+
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark p-3 my-2">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="p-4 text-white" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <form class="form-inline">
+                        <p class="ml-1 p-2 mb-1">Newsletter!</p>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" id="inputgmail2" placeholder="enter gmail">
+                        </div>
+                        <button type="submit" class="ml-2 btn btn-secondary mb-2">subscribe</button>
+                    </form>
+                    <br>
+                    <p class="text-secondary text-center">
+                        JNFashion LTD
+                        <br>
+                        H-90, Flat-6a, R-20, Block-B
+                        <br>
+                        Kuril, Dhaka
+                        <br>
+                        Customer Support:+8801798724156
+                        <br>
+                        Email:jnabin2@gmail.com
+                    </p>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">
+                                SHIPPING & EXCHANGE
+                                POLICY
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">PRIVACY POLICY</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Terms and condition</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">About us</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Login info</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Size Guide</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">contact us</a>
+                        </li>
+                        <li class="text-secondary">
+                            helpline: 01798724156
+
+                        </li>
+
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">store location</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <p class="text-uppercase text-muted">copyright &copy; 2021 jnshop, all rights reserved. developed by team jn.</p>
+                </div>
+                <div class="col-md text-center">
+                    <ul class="list-unstyled folist">
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function () {
+            function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+        
+            $.ajax({
+                url: 'http://localhost:49274/api/product/getcartitem',
+                method : 'Get',
+                complete: function(xmlHttp, status){
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        
+                        var q=0;
+                        var cx = false;
+                        $.each(data, function(index, value){
+                            var subtotal = 0;
+                            q++;
+                            cx = true;
+                            var image = (value.product.ImageFile).split('|')[0];
+                            if(value.product.Sale != null){
+                                var p = Number(value.product.UnitPrice);
+                                var v = Number(Number(item.product.Sale.Amount)) / 100;
+                                var c = (p - (p * v));
+    
+                                subtotal += (Number(c) * Number(value.count));
+        
+                            }else{
+                                subtotal += (Number(value.product.UnitPrice) * value.count);
+                            }
+                            $(".init").append(`<div class="container mt-3 v1${q}">`+
+                                    `<div class="row items${q}">`+
+                                        `<div class="col-3 picture">`+
+                                           
+                                            `<img src="../image/${image}" alt="cartimage" style="max-width:100%"/>`+
+                                        `</div>`+
+                                        `<div class="col-9 information${q}">`+
+                                            `<div class="productname">`+
+                                                `<a class="font-weight-bold" href="../Product/Details?id=${value.product.ProductId}">${value.product.Product_name}</a>`+
+                                            `</div>`);
+                            if(value.size != null){
+                                $(`.information${q}`).append(`<div class="productsize">`+
+                                                    `<p class="text-secondary">Size:${value.size.SizeName}</p>`+
+                                                `</div>`);
+                            }
+                            $(`.information${q}`).append(`<div class="productprice${q}">`+
+                                                `<span class="p-2 border border-dark">${value.count}</span>`);
+                                                if(value.product.Sale != null){
+                                                    var p = Number(value.product.UnitPrice);
+                                                    var v = Number(item.product.Sale.Amount) / 100;
+                                                    var c = (p - (p * v));
+                                                    $(`.productprice${q}`).append(`<span class="ml-2"><s>৳ ${value.product.UnitPrice}</s> &nbsp; ৳ ${c}</span>`);
+                                                }else{
+                                                    $(`.productprice${q}`).append(`<span class="ml-2">৳ ${value.product.UnitPrice}</span>`);
+                                                }
+                                                $(`.information${q}`).append(`</div>`);
+                                                $(`.items${q}`).append(`</div>`);
+                                                $(`.v1${q}`).append(`</div>`);
+                                                $(".init").append(`</div></hr><div class="container mt-1">`+
+                                `<div class="row">`+
+                                    `<div class="col-8">`+
+                                        `<p>Subtotal:</p>`+
+                                    `</div>`+
+                                    `<div class="col-4">`+
+                                        `<p class="text-secondary">${subtotal} tk</p>`+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`);
+                        });
+                        if(cx){
+                            $(".init").append(`<div class="container m-2">`+
+                                `<a class="p-2 border border-dark bg-secondary text-light" href="../cart">Go To Cart</a>`+
+                            `</div>`)
+                        }
+                        if(!cx){
+                            $(".init").append(`<p class="text-danger">Nothing In Your Cart</p>`);
+                        }
+                        
+                    }
+                }
+            });
+
+            if(getCookie("username")!=null){
+                        
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Customer/Index.html?id=${getCookie("userid")}">${getCookie("username")}</a></li>`);
+                        $(".profileList").append(`<li><a href="../Logout">Logout</a></li>`);
+                    }else{
+                       
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Registration">Registration</a></li>`);
+                        $(".profileList").append(`<li><a href="../Login">Login</a></li>`);
+                    }
+
+            $.ajax({
+                url: 'http://localhost:49274/api/Category/NavBar',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        
+                        for (var i = 0; i < data.length; i++) {
+                            
+                            if(data[i].SubCatetories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].Category_id}/1">${data[i].Category_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li class="active">`+
+                    `<a href="#homeSubmenu ${data[i].Category_id}" data-toggle="collapse" aria-expanded="false">${data[i].Category_name}</a>`+
+                
+                    `<ul class="collapse list-unstyled" id="homeSubmenu ${data[i].Category_id}">`);
+                        for(var j=0; j<data[i].SubCatetories.length; j++){
+                            if(data[i].SubCatetories[j].FinalSubCategories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].SubCatetories[j].SubCategoryId}/1">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li>`+
+                                    `<a href="#NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}" data-toggle="collapse" aria-expanded="false">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                                    `<ul class="ml-4 collapse list-unstyled" id="NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}">`);
+                                for(var k=0; k<data[i].SubCatetories[j].FinalSubCategories.length; k++){
+                                    $(".components").append(`<li>`+
+                                                `<a href="/home/getProducts/${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCategoryId}/3">${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCate_name}</a>`+
+                                            `</li>`);
+                                }
+                                $(".components").append(`</ul>`);
+                                $(".components").append(`</li>`);
+                            }
+                        }
+                        $(".components").append(`</ul>`);
+                        $(".components").append(`</li>`);
+                            }
+                        }
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

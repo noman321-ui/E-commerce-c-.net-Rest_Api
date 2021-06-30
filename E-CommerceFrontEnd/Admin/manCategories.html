@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/WomenCategories.html/2">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/lifestylesCategories.html/3">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ReviewList">Review</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/ProductCount">ProductCount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Admin/OrderHistory">OrderHistory</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../Admin"><b>Home&reg</b></a></div>
+            <div class="dropdown show">
+                <a class="btn btn-white text-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Report
+                </a>
+        
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="../Admin/mencategoryReportdetails.html">MenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/womencategoryReportdetails.html">WomenCategory Report</a>
+                    <a class="dropdown-item" href="../Admin/lifestylecategoryReportdetails.html">LifestyleCategory Report</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddManager.html">Add Manager</a>
+                    <a class="mr-2 text-secondary cart" href="../Admin/AddProduct.html">Add Product</a>
+                    <a class="mr-2 text-secondary profile" href="../Admin/AdminProfile.html"><i class="fa fa-user fa-lg"></i></a>
+                    <a class="text-secondary profile" href="../Logout">Logout</a>
+                </div>
+            </div>
+
+        </nav>
+
+   
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Admin/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/WomenCategories.html">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/lifestylesCategories.html">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Admin/ReviewList.html">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="../Admin/ProductCount.html">ProductCount</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <nav class="hide border-top border-secondary">
+            <ul class="list-unstyled py-0 mb-0 ml-3 HideAbleList">
+                
+            </ul>
+        </nav>
+        <div class="hovernavinfo"></div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../image/slide1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../image/slide2.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../image/slide3.jpeg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+        <div class="container mt-4">
+            <div class="row text-center top2cate">
+        
+               
+        
+            </div>
+        </div>
+
+
+    </main>
+    <script>
+
+
+$.ajax({
+                url: 'http://localhost:49274/api/home/manCategories/1',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        var subcate = data.SubCatetories;
+                        var y = 0;
+                        var x = 0;
+                        var cname = "DivOverSlide";
+                        var cnam = "HoverAbleDiv";
+                        var cnam1 = "";
+                        $(".HideAbleList").empty();
+                        $.each(subcate, function (index, value) {
+                            var c = "x" + y;
+                            if(value["FinalSubCategories"].length == 0){
+                                $(".HideAbleList").append(`<li class="d-inline-block p-3 ml-3 mr-1 NewIn ${c}"><a href="../Admin/ManProductlist.html?id=${value["SubCategoryId"]}&categoryname=s">${value["SubCategory_name"]}</a></li>`);
+                               
+                            }else{
+                              
+                                $(".HideAbleList").append(`<li class="d-inline-block p-3 ml-3 mr-1 NewIn ${c}">${value["SubCategory_name"]}</li>`);
+                            }
+                            y++;
+                        });
+                        
+                        $.each(subcate, function (index, value) {
+                            
+                            if(value["FinalSubCategories"].length > 0){
+                               
+                                cname = "DivOverSlide" + x;
+                                cnam = "HoverAbleDiv" + x;
+                                cnam1 = "enterfsub" + x;
+                                $(".hovernavinfo").append(`<div class=${cname}><div class="container ${cnam}"><div class="row p-2"><div class="col"> <ul class="list-unstyled ${cnam1}" style="column-count: 3">`);
+                                  
+                                $.each(value["FinalSubCategories"], function(index2, value2) {
+                                    $(`.${cnam1}`).append(`<li><a href="../Admin/ManProductlist.html?id=${value2["FinalSubCategoryId"]}&categoryname=f">${value2["FinalSubCate_name"]}</a></li>`);
+                                });
+                                $(".hovernavinfo").append(`</ul></div></div></div></div></div>`);
+                                x++;
+                            }
+                            
+                        });
+                        $('.x0').on('mouseenter', function () {
+       
+        $('.HoverAbleDiv0').stop().show();
+    });
+    $(".x0, .HoverAbleDiv0").mouseleave(function () {
+        if (!$('.HoverAbleDiv0').is(':hover')) {
+            $('.HoverAbleDiv0').hide();
+        };
+    });
+    $('.x1').mouseenter(function () {
+        $('.HoverAbleDiv1').stop().show();
+    });
+    $(".x1, .HoverAbleDiv1").mouseleave(function () {
+        if (!$('.HoverAbleDiv1').is(':hover')) {
+            $('.HoverAbleDiv1').hide();
+        };
+    });
+    $('.x2').mouseenter(function () {
+        $('.HoverAbleDiv2').stop().show();
+    });
+    $(".x2, .HoverAbleDiv2").mouseleave(function () {
+        if (!$('.HoverAbleDiv2').is(':hover')) {
+            $('.HoverAbleDiv2').hide();
+        };
+    });
+    $('.x3').mouseenter(function () {
+        $('.HoverAbleDiv3').stop().show();
+    });
+    $(".x3, .HoverAbleDiv3").mouseleave(function () {
+        if (!$('.HoverAbleDiv3').is(':hover')) {
+            $('.HoverAbleDiv3').hide();
+        };
+    });
+    $('.x4').mouseenter(function () {
+        $('.HoverAbleDiv4').stop().show();
+    });
+    $(".x4, .HoverAbleDiv4").mouseleave(function () {
+        if (!$('.HoverAbleDiv4').is(':hover')) {
+            $('.HoverAbleDiv4').hide();
+        };
+    });
+    $('.x5').mouseenter(function () {
+        $('.HoverAbleDiv5').stop().show();
+    });
+    $(".x5, .HoverAbleDiv5").mouseleave(function () {
+        if (!$('.HoverAbleDiv5').is(':hover')) {
+            $('.HoverAbleDiv5').hide();
+        };
+    });
+    $('.x6').mouseenter(function () {
+        $('.HoverAbleDiv6').stop().show();
+    });
+    $(".x6, .HoverAbleDiv6").mouseleave(function () {
+        if (!$('.HoverAbleDiv6').is(':hover')) {
+            $('.HoverAbleDiv6').hide();
+        };
+    });     
+                        var max = 0;
+                        var max2=-1;
+                        var fid;
+                        var name;
+                        var name2;
+                        var catename;
+                        var fid2;
+                        var catename2;
+                        $.each(subcate, function (index, value) {
+                            $.each(value["FinalSubCategories"], function(index1, value1){
+                                if(value1["Products"].length>max){
+                                    max = value1["Products"].length;
+                                    fid = value1["FinalSubCategoryId"];
+                                    name = value1["FinalSubCate_name"];
+                                    catename = "f";
+                                }
+                                if(value1["Products"].length> max2 && value1["Products"].length<max){
+                                    max2 = value1["Products"].length;
+                                    fid2 = value1["FinalSubCategoryId"];
+                                    name2 = value1["FinalSubCate_name"];
+                                    catename2 = "f";
+                                }
+                            });
+                            if(max>0){
+                                $(".top2cate").append(`<div class="col-md-4"> <div class="bg-hoodies" style="background-image:url('../image/background.PNG');"><div class="uppercontent"><div class="content"><div class="content-name "><p class="text-light mb-1">${name}</p></div><div class="shop"><p class="text-light">Shop Now</p></div><a class="full-link" href="../Admin/ManProductlist.html?id=${fid}&categoryname=${catename}">Shop Now</a></div></div></div></div>`);
+                            }
+                           if(max2>0){
+                            $(".top2cate").append(`<div class="col-md-4"> <div class="bg-hoodies" style="background-image:url('../image/background.PNG');"><div class="uppercontent"><div class="content"><div class="content-name "><p class="text-light mb-1">${name2}</p></div><div class="shop"><p class="text-light">Shop Now</p></div><a class="full-link" href="../Admin/ManProductlist.html?id=${fid2}&categoryname=${catename2}">Shop Now</a></div></div></div></div>`);
+                           }
+                           max=0;
+                           max2=0;
+                           
+                        });
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+
+
+            $.ajax({
+                url: 'http://localhost:49274/api/home/username',
+                method: 'GET',
+                complete: function (xmlHttp, status) {
+                    
+                    if(xmlHttp.status == 200){
+                        var username = xmlHttp.responseJSON;
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Customer">${username}</a></li>`);
+                        $(".profileList").append(`<li><a href="../Logout">LogOut</a></li>`);
+                    }else if(xmlHttp.status == 204){
+                       
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Registration">Registration</a></li>`);
+                        $(".profileList").append(`<li><a href="../Login">Login</a></li>`);
+                    }
+                  }
+            });
+            $.ajax({
+                url: 'http://localhost:49274/api/Category/NavBar',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        
+                        for (var i = 0; i < data.length; i++) {
+                            
+                            if(data[i].SubCatetories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].Category_id}/1">${data[i].Category_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li class="active">`+
+                    `<a href="#homeSubmenu ${data[i].Category_id}" data-toggle="collapse" aria-expanded="false">${data[i].Category_name}</a>`+
+                
+                    `<ul class="collapse list-unstyled" id="homeSubmenu ${data[i].Category_id}">`);
+                        for(var j=0; j<data[i].SubCatetories.length; j++){
+                            if(data[i].SubCatetories[j].FinalSubCategories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].SubCatetories[j].SubCategoryId}/1">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li>`+
+                                    `<a href="#NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}" data-toggle="collapse" aria-expanded="false">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                                    `<ul class="ml-4 collapse list-unstyled" id="NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}">`);
+                                for(var k=0; k<data[i].SubCatetories[j].FinalSubCategories.length; k++){
+                                    $(".components").append(`<li>`+
+                                                `<a href="/home/getProducts/${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCategoryId}/3">${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCate_name}</a>`+
+                                            `</li>`);
+                                }
+                                $(".components").append(`</ul>`);
+                                $(".components").append(`</li>`);
+                            }
+                        }
+                        $(".components").append(`</ul>`);
+                        $(".components").append(`</li>`);
+                            }
+                        }
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+
+
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
